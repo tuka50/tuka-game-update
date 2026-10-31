@@ -1,8 +1,8 @@
-{
-  "version": "1.11.1",
-  "build": 111,
-  "url": "https://raw.githubusercontent.com/tuka50/tuka-game-update/main/firmware/TUKA_GameSystem_latest.bin",
-  "size": 0,
-  "sha256": "",
-  "notes": "GitHub Raw OTA sunucusu kuruldu. SHA-256 derleme uyumlulugu duzeltildi."
+﻿{
+    "version":  "1.12",
+    "build":  112,
+    "url":  "https://raw.githubusercontent.com/tuka50/tuka-game-update/main/firmware/TUKA_GameSystem_latest.bin",
+    "size":  1260304,
+    "sha256":  "3310610a630ba5952f2a4ef0d8f6b2e99571c0e0dda7150503f53a09c35311c0",
+    "notes":  "Touch, ses durumu, encoder, menu flicker ve tema iyilestirmeleri."
 }
