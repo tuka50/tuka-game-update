@@ -1,8 +1,8 @@
 ﻿{
-    "version":  "1.12",
-    "build":  112,
+    "version":  "1.13",
+    "build":  113,
     "url":  "https://raw.githubusercontent.com/tuka50/tuka-game-update/main/firmware/TUKA_GameSystem_latest.bin",
-    "size":  1260304,
-    "sha256":  "3310610a630ba5952f2a4ef0d8f6b2e99571c0e0dda7150503f53a09c35311c0",
-    "notes":  "Touch, ses durumu, encoder, menu flicker ve tema iyilestirmeleri."
+    "size":  1261520,
+    "sha256":  "2a8d7642a72209408d983755e35a00a7a67bd6dfff644c4f5d16d6a92ef52921",
+    "notes":  "DFPlayer, LED Tenis zamanlama, kalici touch kalibrasyonu ve UI deger boyutu duzeltmeleri."
 }
