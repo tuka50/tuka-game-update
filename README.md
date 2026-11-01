@@ -4,35 +4,28 @@ ESP32 tabanlı **TUKA Game System** firmware ve OTA güncelleme deposu.
 
 ## Güncel Sürüm
 
-**v1.15 — Build 115**
+**v1.16 — Build 116**
 
-## v1.15 Detaylı Değişiklikler
+## v1.16 Detaylı Değişiklikler
 
-- İstatistikler Ayarlar klasöründen çıkarılıp ana menüye taşındı.
-- Ana menü sırası: **7 oyun → AYARLAR → İSTATİSTİK → YARDIM → HAKKINDA**.
-- Oyunlar ve yeni sistem menüleri renkli grafik ikonlarla gösteriliyor.
-- İstatistik ekranı daha büyük, kart tabanlı ve üç sayfalı hale getirildi.
-- LED Tenis 1P CPU modunda ilk hangi fiziksel P1/P2 butonuna basılırsa **o taraf oyuncu**, karşı taraf CPU oluyor.
-- CPU artık fiziksel P1 veya P2 tarafında oynayabiliyor.
-- Oyun lobby satırları `P1 İSİM` / `P2 İSİM` olarak sadeleştirildi; ICON sekmesi korunuyor.
-- Ayrıntılı **YARDIM** menüsü eklendi: her oyun, kontroller, menüler, Wi‑Fi/OTA, ses/pil.
-- **HAKKINDA** ekranı eklendi:
-  - Tunahan Kara
-  - Telefon: +90 534 236 39 54
-  - Instagram: @yazici.tiridi
-  - YouTube: @tuka_music
-  - Adil Özkan'a katkı ve desteği için özel teşekkür bölümü.
+- LED Tenis **MOD** seçimi artık oyun ayarlarının içinde değil, oyuna girince açılan ana oyun menüsünde.
+- Yardım ve Hakkında ekranları dört dile bağlandı; dil değişince bu bölümler de anında değişiyor.
+- Yardım/Hakkında yazıları büyütüldü ve kelimeler ortadan bölünmeden otomatik satır sarılıyor.
+- Genel Ayarlara **Maks LED Parlaklık** eklendi. Varsayılan **%50**.
+- Pil **%15 altına** düşerse global LED parlaklığı en fazla **%20** oluyor.
+- Pil tekrar **%50 veya üzerine** çıkınca kullanıcının ayarladığı parlaklık geri geliyor.
+- LED sayısı düşürüldüğünde ana menü LED animasyonu da orantılı olarak daralıyor.
+- DFPlayer için non-blocking ses seviyesi koruması eklendi; oyun sırasında beklenmedik ses yükselmesi azaltıldı.
+- TFT backlight şu an doğrudan 3.3 V bağlı olduğu için yazılımdan gerçek ekran parlaklık kontrolü eklenmedi.
 
 ## OTA Adresleri
 
 Manifest:
-
 ```text
 https://raw.githubusercontent.com/tuka50/tuka-game-update/main/version.json
 ```
 
 Firmware:
-
 ```text
 https://raw.githubusercontent.com/tuka50/tuka-game-update/main/firmware/TUKA_GameSystem_latest.bin
 ```
@@ -345,5 +338,26 @@ v1.15
 - Ana menuye HAKKINDA ekrani eklendi.
   Tunahan Kara iletisim/sosyal medya bilgileri ve Adil Ozkan tesekkur bolumu eklendi.
 - YARDIM ve HAKKINDA menulerine grafik ikonlar eklendi.
+
+
+v1.16
+-----
+- LED Tenis MOD secimi OYUN AYARLARI'ndan cikarildi; LED Tenis oyun lobby'sine tasindi.
+- LED Tenis oyun ayarlari 11 satira dusuruldu; CPU zorlugu ve diger teknik ayarlar kendi klasorunde kalir.
+- YARDIM ve HAKKINDA metinleri Turkce, Ingilizce, Azerbaycan ve Rusca secili dile gore degisir.
+- YARDIM ve HAKKINDA yazi boyutu textSize 2 yapildi.
+- Uzun metinler kelime ortasindan bolunmeden otomatik satir sarma ile gosterilir.
+- YARDIM ve HAKKINDA ekranlarinda encoder/touch ile satir kaydirma eklendi.
+- Genel Ayarlar'a MAKS LED PARLAKLIK eklendi; varsayilan %50.
+- Maksimum LED parlakligi tukacfg kalici ayar alaninda saklanir ve firmware guncellemesinde korunur.
+- Pil %15 altina indiginde global LED parlakligi en fazla %20'ye sinirlanir.
+- Dusuk pil LED modu, pil %50 veya ustune cikana kadar aktif kalir; sonra kullanici parlaklik ayari geri gelir.
+- Ana menu LED animasyon genisligi aktif LED sayisiyla orantili hale getirildi.
+  LED sayisi azalinca animasyon fiziksel olarak daralir.
+- DFPlayer icin non-blocking volume guard eklendi.
+  Her track/anons/muzik baslangicindan sonra hedef profil ses seviyesi yeniden uygulanir;
+  oyun sirasinda sesin kendiliginden yukselmesi hedeflenerek bastirildi.
+- Mevcut TFT backlight LED pini dogrudan 3.3V'a bagli oldugu icin sahte bir ekran parlaklik ayari eklenmedi.
+  Yazilimla ekran parlakligi ayari icin backlight'in PWM kontrollu transistor/MOSFET uzerinden surulmesi gerekir.
 
 ```
