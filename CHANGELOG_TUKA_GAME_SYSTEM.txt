@@ -324,3 +324,29 @@ v1.16
   oyun sirasinda sesin kendiliginden yukselmesi hedeflenerek bastirildi.
 - Mevcut TFT backlight LED pini dogrudan 3.3V'a bagli oldugu icin sahte bir ekran parlaklik ayari eklenmedi.
   Yazilimla ekran parlakligi ayari icin backlight'in PWM kontrollu transistor/MOSFET uzerinden surulmesi gerekir.
+
+
+v1.17
+-----
+- GitHub README surum gecmisi ters kronolojik yapildi:
+  en yeni surum en ustte, eski surumler alta dogru gider.
+- AYARLAR klasorune ayri EKRAN AYARLARI klasoru eklendi.
+- Genel Ayarlar sadeleştirildi: Toplam LED, Maks LED Parlaklik, Dil,
+  Fabrika Ayari ve Geri.
+- EKRAN AYARLARI:
+  Ekran Parlaklik durumu, Ekran Yonu 0/180, Touch Kalibrasyonu,
+  Touch Durumu ve Geri.
+- Mevcut TFT LED/backlight pini 3.3V'a sabit bagli oldugu icin
+  Ekran Parlaklik satiri bilgi amaclidir; sahte bir yazilim slider'i eklenmedi.
+  Gercek parlaklik ayari icin backlight PWM donanimi gerekir.
+- Yardim/Hakkinda govde metni kompakt 1x2 olcege alindi.
+  Eski 2x metinden daha dar, standart 1x metinden daha okunakli yuksekliktedir.
+- Yardim/Hakkinda metin alani sagdaki scroll oklarindan once bitecek sekilde
+  232 px ile sinirlandi; metin artik oklarin altinda kalmaz.
+- Kelime bazli satir sarma korunur; kelimeler ortadan bolunmez.
+- Yardim satirlarinda AMAC:, ENCODER:, WIFI AYARLARI: gibi
+  iki nokta ust uste ile biten baslik kisimlari kirmizi gosterilir.
+- Hakkinda ekraninda Ozel Tesekkur / Adil Ozkan bolumu ve aciklamasi
+  komple kirmizi gosterilir.
+- Touch kalibrasyonu artik EKRAN AYARLARI icinden yapilir ve tamamlandiginda
+  yine EKRAN AYARLARI ekranina doner.

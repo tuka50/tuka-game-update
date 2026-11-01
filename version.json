@@ -1,8 +1,8 @@
 ﻿{
-    "version":  "1.16",
-    "build":  116,
+    "version":  "1.17",
+    "build":  117,
     "url":  "https://raw.githubusercontent.com/tuka50/tuka-game-update/main/firmware/TUKA_GameSystem_latest.bin",
-    "size":  1295952,
-    "sha256":  "fb86bd1854270962448b726b4cafa510d7d4aebae673399dcc12ed5a3faa6f50",
-    "notes":  "LED Tenis mod menusu, cok dilli Yardim/Hakkinda, LED parlaklik ve pil tasarrufu, DFPlayer volume guard."
+    "size":  1299088,
+    "sha256":  "25100c1ae77e75984aeed7f5375d15fbfe55af1b12c6281cc5c36b10c171a130",
+    "notes":  "Ekran Ayarlari, Yardim/Hakkinda layout-renk duzeltmeleri ve ters kronolojik README."
 }
