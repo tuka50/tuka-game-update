@@ -4,32 +4,24 @@ ESP32 tabanlı **TUKA Game System** firmware ve OTA güncelleme deposu.
 
 ## Güncel Sürüm
 
-**v1.14 — Build 114**
+**v1.15 — Build 115**
 
-## v1.14 Detaylı Değişiklikler
+## v1.15 Detaylı Değişiklikler
 
-- Ana menü sadeleştirildi: **7 oyun + ⚙ AYARLAR**.
-- Her oyunun başına oyuna uygun grafik ikon eklendi.
-- Genel Ayarlar, Ses, Wi‑Fi, Temalar, İstatistik ve Güncellemeler tek **AYARLAR** klasöründe toplandı.
-- Her oyuna ayrı **OYUN AYARLARI** klasörü eklendi.
-- Oyuna özel skor, hız, süre ve zorluk ayarları ilgili oyunun içine taşındı.
-- LED Tenis ayarları kendi klasöründe toplandı: mod, CPU zorluğu, hedef skor, hızlar, vuruş bölgeleri, parlaklık, top rengi ve iz/gölge.
-- Ayarlar yeni `tukacfg` kalıcı NVS alanında anahtar bazlı saklanıyor. Firmware yapısı değişse bile OTA sonrası geri yükleniyor.
-- Touch kalibrasyonu ayrı `tukatouch`, Wi‑Fi bilgileri de ayrı Wi‑Fi Preferences alanında korunmaya devam ediyor.
-- Güncelleme ekranındaki **CİHAZI KAPATMAYIN!** uyarısı büyütülüp kırmızı yapıldı.
-- Açılışta **GAME SYSTEMS** üstte ve daha büyük gösteriliyor.
-- Açılış progress bar tam ekran/çubuk temizlemek yerine yalnız yeni dolan kısmı çiziyor; flicker azaltıldı.
-- Oyun sırasında oyuncu isimleri büyütüldü.
-- Oyun sonunda kazananın isim + puan bölümü animasyon yapıyor ve altında **P1 KAZANDI / P2 KAZANDI / CPU KAZANDI** gösteriliyor.
-- Menü geri dönüşleri klasör mantığına göre düzenlendi.
-- OTA hazırlama aracı artık yol sormuyor; Masaüstündeki v1.14 `.bin` dosyasını otomatik buluyor.
-
-## OTA Dosyaları
-
-- `version.json` — cihazın okuduğu manifest
-- `firmware/TUKA_GameSystem_latest.bin` — güncel application firmware
-- `README.md` — son sürüm + tüm sürüm geçmişi
-- `CHANGELOG_TUKA_GAME_SYSTEM.txt` — ayrıntılı kümülatif log
+- İstatistikler Ayarlar klasöründen çıkarılıp ana menüye taşındı.
+- Ana menü sırası: **7 oyun → AYARLAR → İSTATİSTİK → YARDIM → HAKKINDA**.
+- Oyunlar ve yeni sistem menüleri renkli grafik ikonlarla gösteriliyor.
+- İstatistik ekranı daha büyük, kart tabanlı ve üç sayfalı hale getirildi.
+- LED Tenis 1P CPU modunda ilk hangi fiziksel P1/P2 butonuna basılırsa **o taraf oyuncu**, karşı taraf CPU oluyor.
+- CPU artık fiziksel P1 veya P2 tarafında oynayabiliyor.
+- Oyun lobby satırları `P1 İSİM` / `P2 İSİM` olarak sadeleştirildi; ICON sekmesi korunuyor.
+- Ayrıntılı **YARDIM** menüsü eklendi: her oyun, kontroller, menüler, Wi‑Fi/OTA, ses/pil.
+- **HAKKINDA** ekranı eklendi:
+  - Tunahan Kara
+  - Telefon: +90 534 236 39 54
+  - Instagram: @yazici.tiridi
+  - YouTube: @tuka_music
+  - Adil Özkan'a katkı ve desteği için özel teşekkür bölümü.
 
 ## OTA Adresleri
 
@@ -45,9 +37,7 @@ Firmware:
 https://raw.githubusercontent.com/tuka50/tuka-game-update/main/firmware/TUKA_GameSystem_latest.bin
 ```
 
-## Tüm Sürüm Geçmişi
-
-Aşağıdaki kayıt, prototip döneminden v1.14'e kadar kümülatif geliştirme günlüğüdür.
+## İlk Sürümden İtibaren Tüm Geliştirme Geçmişi
 
 ```text
 TUKA GAME SYSTEM - KUMULATIF CHANGELOG
@@ -335,5 +325,25 @@ v1.14
   tum kumulatif surum gecmisini de tasir.
 - GitHub OTA hazirlama BAT/PowerShell artik kullanicidan yol istemez.
   Masaustunde TUKA_GameSystem_ESP32_v1_14_GITHUB.ino.bin dosyasini otomatik arar.
+
+
+v1.15
+-----
+- ISTATISTIK AYARLAR klasorunden cikarildi ve ana menuye tasindi.
+- Ana menu sirasi: 7 oyun, AYARLAR, ISTATISTIK, YARDIM, HAKKINDA.
+- Ana menu oyun ve sistem ikonlari sabit renkli hale getirildi.
+- ISTATISTIK ekrani 3 sayfali, daha buyuk ve anlasilir kart tasarimina gecirildi.
+- LED Tenis 1P CPU modunda artik insan tarafi sabit P1 degil.
+  Baslangic hazir ekraninda ilk hangi fiziksel P1/P2 butonuna basilirsa
+  o taraf oyuncu olur, karsi taraf CPU olur.
+- CPU sol/P1 veya sag/P2 fiziksel tarafta oynayabilecek sekilde tenis CPU
+  hedef, vurus, skor ve istatistik mantigi genellestirildi.
+- Oyun lobby satirlari P1 ISIM ve P2 ISIM olarak sadelestirildi.
+  Isim klavyesindeki ICON sekmesi korunur; ikon hala bagimsiz secilebilir.
+- Ana menuye detayli YARDIM klasoru eklendi:
+  7 oyunun her biri, kontroller, menu kullanimi, Wi-Fi/guncelleme ve ses/pil.
+- Ana menuye HAKKINDA ekrani eklendi.
+  Tunahan Kara iletisim/sosyal medya bilgileri ve Adil Ozkan tesekkur bolumu eklendi.
+- YARDIM ve HAKKINDA menulerine grafik ikonlar eklendi.
 
 ```

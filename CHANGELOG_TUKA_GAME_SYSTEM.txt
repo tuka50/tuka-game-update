@@ -283,3 +283,23 @@ v1.14
   tum kumulatif surum gecmisini de tasir.
 - GitHub OTA hazirlama BAT/PowerShell artik kullanicidan yol istemez.
   Masaustunde TUKA_GameSystem_ESP32_v1_14_GITHUB.ino.bin dosyasini otomatik arar.
+
+
+v1.15
+-----
+- ISTATISTIK AYARLAR klasorunden cikarildi ve ana menuye tasindi.
+- Ana menu sirasi: 7 oyun, AYARLAR, ISTATISTIK, YARDIM, HAKKINDA.
+- Ana menu oyun ve sistem ikonlari sabit renkli hale getirildi.
+- ISTATISTIK ekrani 3 sayfali, daha buyuk ve anlasilir kart tasarimina gecirildi.
+- LED Tenis 1P CPU modunda artik insan tarafi sabit P1 degil.
+  Baslangic hazir ekraninda ilk hangi fiziksel P1/P2 butonuna basilirsa
+  o taraf oyuncu olur, karsi taraf CPU olur.
+- CPU sol/P1 veya sag/P2 fiziksel tarafta oynayabilecek sekilde tenis CPU
+  hedef, vurus, skor ve istatistik mantigi genellestirildi.
+- Oyun lobby satirlari P1 ISIM ve P2 ISIM olarak sadelestirildi.
+  Isim klavyesindeki ICON sekmesi korunur; ikon hala bagimsiz secilebilir.
+- Ana menuye detayli YARDIM klasoru eklendi:
+  7 oyunun her biri, kontroller, menu kullanimi, Wi-Fi/guncelleme ve ses/pil.
+- Ana menuye HAKKINDA ekrani eklendi.
+  Tunahan Kara iletisim/sosyal medya bilgileri ve Adil Ozkan tesekkur bolumu eklendi.
+- YARDIM ve HAKKINDA menulerine grafik ikonlar eklendi.
